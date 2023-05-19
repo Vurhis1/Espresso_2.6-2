@@ -1,0 +1,53 @@
+{
+    "name": "testGalleryForRecyclerView",
+    "start": 1684503813058,
+    "stop": 1684503817885,
+    "stage": "finished",
+    "description": null,
+    "descriptionHtml": null,
+    "status": "passed",
+    "statusDetails": null,
+    "steps": [
+    ],
+    "attachments": [
+    ],
+    "parameters": [
+    ],
+    "uuid": "edd4739d-8459-41b4-a583-17a1425e2e98",
+    "historyId": "e90c5ec0ad28dff42baf86964829cc69",
+    "fullName": "ru.kkuzmichev.simpleappforespresso.IdlingTest.testGalleryForRecyclerView",
+    "labels": [
+        {
+            "name": "package",
+            "value": "ru.kkuzmichev.simpleappforespresso"
+        },
+        {
+            "name": "testClass",
+            "value": "ru.kkuzmichev.simpleappforespresso.IdlingTest"
+        },
+        {
+            "name": "testMethod",
+            "value": "testGalleryForRecyclerView"
+        },
+        {
+            "name": "suite",
+            "value": "ru.kkuzmichev.simpleappforespresso.IdlingTest"
+        },
+        {
+            "name": "host",
+            "value": "localhost"
+        },
+        {
+            "name": "thread",
+            "value": "Instr: androidx.test.runner.AndroidJUnitRunner(764)"
+        },
+        {
+            "name": "framework",
+            "value": "junit4"
+        },
+        {
+            "name": "language",
+            "value": "kotlin"
+        }
+    ]
+}
