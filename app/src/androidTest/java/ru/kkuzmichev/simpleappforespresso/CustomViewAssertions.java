@@ -7,7 +7,7 @@ public class CustomViewAssertions {
     public static ViewAssertion isRecyclerView() {
         return (view, noViewFoundException) -> {
             if (!(view instanceof RecyclerView))
-                throw new IllegalStateException("This is not RecyclerView");
+                throw new IllegalStateException("Это не RecyclerView");
         };
     }
 }

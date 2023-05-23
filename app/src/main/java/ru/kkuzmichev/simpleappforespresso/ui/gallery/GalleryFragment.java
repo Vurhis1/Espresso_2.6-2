@@ -60,6 +60,7 @@ public class GalleryFragment extends Fragment {
 
 
     private void fakeLoadData() {
+        EspressoIdlingResources.increment();
         progressBar.setVisibility(View.VISIBLE);
         recyclerView.setVisibility(View.INVISIBLE);
         Handler handler = new Handler();

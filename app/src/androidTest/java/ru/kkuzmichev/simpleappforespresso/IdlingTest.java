@@ -35,6 +35,13 @@ public class IdlingTest {
     @Before
     public void registerIdlingResources() {
         IdlingRegistry.getInstance().register(EspressoIdlingResources.idlingResource);
+
+        ViewInteraction menu = onView(isAssignableFrom(AppCompatImageButton.class));
+        menu.check(matches(isDisplayed()));
+        menu.perform(click());
+        ViewInteraction gallery = onView(withId(R.id.nav_gallery));
+        gallery.check(matches(isDisplayed()));
+        gallery.perform(click());
     }
 
     @After
@@ -44,27 +51,14 @@ public class IdlingTest {
 
     @Test
     public void testOpenGallery() {
-        ViewInteraction menu = onView(isAssignableFrom(AppCompatImageButton.class));
-        menu.check(matches(isDisplayed()));
-        menu.perform(click());
-        ViewInteraction gallery = onView(withId(R.id.nav_gallery));
-        gallery.check(matches(isDisplayed()));
-        gallery.perform(click());
         ViewInteraction itemSeven = onView(allOf(withId(R.id.item_number), withText("7")));
         itemSeven.check(matches(withText("7")));
     }
 
     @Test
     public void testGalleryForRecyclerView() {
-        ViewInteraction menu = onView(isAssignableFrom(AppCompatImageButton.class));
-        menu.check(matches(isDisplayed()));
-        menu.perform(click());
-        ViewInteraction gallery = onView(withId(R.id.nav_gallery));
-        gallery.check(matches(isDisplayed()));
-        gallery.perform(click());
-
         ViewInteraction recyclerView = onView(withId(R.id.recycle_view));
-        recyclerView.check(matches(not(isDisplayed())));
+        recyclerView.check(matches(isDisplayed()));
         recyclerView.check(CustomViewAssertions.isRecyclerView());
         recyclerView.check(matches(CustomViewMatcher.recyclerViewSizeMatcher(10)));
     }
